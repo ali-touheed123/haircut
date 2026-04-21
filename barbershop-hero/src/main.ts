@@ -457,7 +457,7 @@ class ChairScrollSequence {
     for (let i = 1; i <= this.totalFrames; i++) {
       const img = new Image();
       const frameNum = String(i).padStart(3, '0');
-      img.src = `/frames/chair/ezgif-frame-${frameNum}.png`;
+      img.src = `/frames/chair/ezgif-frame-${frameNum}.jpg`;
       img.onload = () => {
         this.loadedCount++;
         if (this.loadedCount === 1) this.scheduleRender();
