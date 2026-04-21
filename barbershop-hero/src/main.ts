@@ -394,7 +394,10 @@ function initGalleryAnimations(): void {
           const randomDelay = Math.random() * 0.8;
           el.style.transitionDelay = `${randomDelay}s`;
           el.classList.add('is-visible');
-          observer.unobserve(el);
+        } else {
+          const el = entry.target as HTMLElement;
+          el.classList.remove('is-visible');
+          el.style.transitionDelay = '0s'; // Reset delay for exit
         }
       });
     },
