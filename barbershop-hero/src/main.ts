@@ -174,14 +174,7 @@ class CardDeck {
 
   private get frontCard(): HTMLElement { return this.cards[0]; }
 
-  /* ── Update visual stack positions without full re-render ── */
-  private restackVisuals(): void {
-    this.cards.forEach((card, idx) => {
-      card.classList.add('restack');
-      card.style.setProperty('--stack-index', String(idx));
-      card.style.zIndex = String(10 - idx);
-    });
-  }
+
 
   /* ── Cycle front card to back of deck ── */
   private cycleFrontToBack(): void {
@@ -332,10 +325,62 @@ function initRipple(): void {
 }
 
 /* ============================================================
+   TEAM SCROLL ANIMATIONS — IntersectionObserver
+   ============================================================ */
+function initTeamAnimations(): void {
+  const rows = document.querySelectorAll<HTMLElement>('.team-row');
+  if (!rows.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // When a row enters the viewport, animate all its children
+          const slideEls = entry.target.querySelectorAll('.slide-from-left, .slide-from-right');
+          slideEls.forEach(el => el.classList.add('is-visible'));
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  rows.forEach((row) => observer.observe(row));
+}
+
+/* ============================================================
+   GALLERY ANIMATIONS
+   ============================================================ */
+function initGalleryAnimations(): void {
+  const items = document.querySelectorAll<HTMLElement>('.reveal-item');
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          // Improved random delay for "Water Drop" popcorn effect (0s to 0.8s)
+          const randomDelay = Math.random() * 0.8;
+          el.style.transitionDelay = `${randomDelay}s`;
+          el.classList.add('is-visible');
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  items.forEach((item) => observer.observe(item));
+}
+
+/* ============================================================
    MAIN INIT
    ============================================================ */
 function init(): void {
   initNavbar();
+  initTeamAnimations();
+  initGalleryAnimations();
 
   // Rating stars
   const starsEl = document.getElementById('stars-container');
@@ -409,7 +454,7 @@ class ChairScrollSequence {
     for (let i = 1; i <= this.totalFrames; i++) {
       const img = new Image();
       const frameNum = String(i).padStart(3, '0');
-      img.src = `/frames/chair/ezgif-frame-${frameNum}.jpg`;
+      img.src = `/frames/chair/ezgif-frame-${frameNum}.png`;
       img.onload = () => {
         this.loadedCount++;
         if (this.loadedCount === 1) this.scheduleRender();
