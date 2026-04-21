@@ -1648,22 +1648,23 @@ body {
 /* ---- Scroll-triggered slide animations ---- */
 .slide-from-left {
   opacity: 0;
-  transform: translateX(-100vw);
-  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(-50vw);
+  transition: opacity 0.8s ease-out,
+              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, opacity;
 }
 
 .slide-from-right {
   opacity: 0;
-  transform: translateX(100vw);
-  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(50vw);
+  transition: opacity 0.8s ease-out,
+              transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, opacity;
 }
 
 .slide-from-left.is-visible,
 .slide-from-right.is-visible {
   opacity: 1;
-  transform: translateX(0);
 }
 
 /* Responsive */

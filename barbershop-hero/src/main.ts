@@ -327,25 +327,55 @@ function initRipple(): void {
 /* ============================================================
    TEAM SCROLL ANIMATIONS — IntersectionObserver
    ============================================================ */
-function initTeamAnimations(): void {
+/* ============================================================
+   TEAM SCROLL SCRUBBING
+   ============================================================ */
+function initTeamScrubbing(): void {
   const rows = document.querySelectorAll<HTMLElement>('.team-row');
   if (!rows.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // When a row enters the viewport, animate all its children
-          const slideEls = entry.target.querySelectorAll('.slide-from-left, .slide-from-right');
-          slideEls.forEach(el => el.classList.add('is-visible'));
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+  const update = () => {
+    const vh = window.innerHeight;
+    const center = vh / 2;
 
-  rows.forEach((row) => observer.observe(row));
+    rows.forEach((row) => {
+      const rect = row.getBoundingClientRect();
+      const rowCenter = rect.top + rect.height / 2;
+      
+      // distance from center of screen (0 means perfectly centered)
+      const dist = rowCenter - center;
+      
+      // Fix "Collision": Only allow movement when row is BELOW center (dist > 0).
+      // Once it reaches center (dist = 0), it stays at 0.
+      // As you scroll up, dist increases again, causing it to slide back out.
+      const move = Math.max(0, dist * 1.5); 
+
+      const leftEl = row.querySelector('.slide-from-left') as HTMLElement;
+      const rightEl = row.querySelector('.slide-from-right') as HTMLElement;
+
+      if (leftEl && rightEl) {
+        // Toggle opacity based on distance
+        if (Math.abs(dist) < vh * 0.8) {
+          leftEl.classList.add('is-visible');
+          rightEl.classList.add('is-visible');
+        } else {
+          leftEl.classList.remove('is-visible');
+          rightEl.classList.remove('is-visible');
+        }
+
+        // Apply transforms
+        leftEl.style.transform = `translateX(${-move}px)`;
+        rightEl.style.transform = `translateX(${move}px)`;
+      }
+    });
+  };
+
+  window.addEventListener('scroll', () => {
+    requestAnimationFrame(update);
+  }, { passive: true });
+  
+  // Initial run
+  update();
 }
 
 /* ============================================================
@@ -382,7 +412,7 @@ function initGalleryAnimations(): void {
    ============================================================ */
 function init(): void {
   initNavbar();
-  initTeamAnimations();
+  initTeamScrubbing();
   initGalleryAnimations();
 
   // Rating stars
