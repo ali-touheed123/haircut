@@ -1,436 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Legacy Barbershop â€“ Finest Cuts Since 1920</title>
-    <meta name="description" content="Experience classic grooming techniques met with modern style at The Legacy Barbershop. Book your appointment today." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
 
-    <!-- ===== NAVBAR ===== -->
-    <header id="navbar" class="navbar">
-      <!-- Left: Logo -->
-      <div class="navbar__logo">
-        <span class="navbar__scissor">âœ‚</span>
-        <span class="navbar__brand">THE LEGACY</span>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Legacy Barbershop â€“ Finest Cuts Since 1920</title>
+  <meta name="description"
+    content="Experience classic grooming techniques met with modern style at The Legacy Barbershop. Book your appointment today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
 
-      <!-- Center: Nav Links -->
-      <nav class="navbar__links" aria-label="Main navigation">
-        <a href="#services" class="nav-link">SERVICES</a>
-        <a href="#team" class="nav-link">OUR TEAM</a>
-        <a href="#about" class="nav-link">ABOUT US</a>
-        <a href="#contact" class="nav-link">CONTACT US</a>
-      </nav>
+<body>
 
-      <!-- Right: Book Now -->
-      <button id="cta-book-nav" class="btn btn--outline navbar__cta">BOOK NOW</button>
-    </header>
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="navbar">
+    <!-- Left: Logo -->
+    <div class="navbar__logo">
+      <span class="navbar__scissor">âœ‚</span>
+      <span class="navbar__brand">THE LEGACY</span>
+    </div>
 
-    <!-- ===== HERO â€” 2-column ===== -->
-    <main id="hero" class="hero">
+    <!-- Center: Nav Links -->
+    <nav class="navbar__links" aria-label="Main navigation">
+      <a href="#services" class="nav-link">SERVICES</a>
+      <a href="#team" class="nav-link">OUR TEAM</a>
+      <a href="#about" class="nav-link">ABOUT US</a>
+      <a href="#contact" class="nav-link">CONTACT US</a>
+    </nav>
 
-      <!-- Ambient blobs -->
-      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
-      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
-      <div class="hero__blob hero__blob--3" aria-hidden="true"></div>
+    <!-- Right: Book Now -->
+    <button id="cta-book-nav" class="btn btn--outline navbar__cta">BOOK NOW</button>
+  </header>
 
-      <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- ===== HERO â€” 2-column ===== -->
+  <main id="hero" class="hero">
+
+    <!-- Ambient blobs -->
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--3" aria-hidden="true"></div>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            LEFT â€” Text + CTAs
       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-      <section class="hero__left" aria-labelledby="hero-headline">
+    <section class="hero__left" aria-labelledby="hero-headline">
 
-        <p class="hero__eyebrow">Established Â· 1920</p>
+      <p class="hero__eyebrow">Established Â· 1920</p>
 
-        <h1 id="hero-headline" class="hero__headline">
-          The Finest<br/>
-          Cuts.<br/>
-          <em>Since 1920.</em>
-        </h1>
+      <h1 id="hero-headline" class="hero__headline">
+        The Finest<br />
+        Cuts.<br />
+        <em>Since 1920.</em>
+      </h1>
 
-        <p class="hero__body">
-          Discover the timeless art of grooming. Experience classic techniques
-          met with modern style, all within a space of tailored luxury.
-          Your best look awaits.
-        </p>
+      <p class="hero__body">
+        Discover the timeless art of grooming. Experience classic techniques
+        met with modern style, all within a space of tailored luxury.
+        Your best look awaits.
+      </p>
 
-        <!-- Two CTA Buttons â€” matching sketch buttons -->
-        <div class="hero__cta-group">
-          <button id="cta-schedule" class="btn btn--primary">
-            Schedule Appointment
-            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-          <button id="cta-services" class="btn btn--outline">Our Services</button>
+      <!-- Two CTA Buttons â€” matching sketch buttons -->
+      <div class="hero__cta-group">
+        <button id="cta-schedule" class="btn btn--primary">
+          Schedule Appointment
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+        <button id="cta-services" class="btn btn--outline">Our Services</button>
+      </div>
+
+      <!-- Trust Strip (below buttons) -->
+      <div class="hero__trust-strip">
+        <div class="trust-item">
+          <span class="trust-item__number">3K+</span>
+          <span class="trust-item__label">Happy Clients</span>
         </div>
-
-        <!-- Trust Strip (below buttons) -->
-        <div class="hero__trust-strip">
-          <div class="trust-item">
-            <span class="trust-item__number">3K+</span>
-            <span class="trust-item__label">Happy Clients</span>
-          </div>
-          <div class="trust-divider" aria-hidden="true"></div>
-          <div class="trust-item">
-            <span class="trust-item__number">10+</span>
-            <span class="trust-item__label">Expert Barbers</span>
-          </div>
-          <div class="trust-divider" aria-hidden="true"></div>
-          <div class="trust-item">
-            <span class="trust-item__number">100+</span>
-            <span class="trust-item__label">Years Legacy</span>
-          </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-item__number">10+</span>
+          <span class="trust-item__label">Expert Barbers</span>
         </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-item__number">100+</span>
+          <span class="trust-item__label">Years Legacy</span>
+        </div>
+      </div>
 
-      </section>
+    </section>
 
-      <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            RIGHT â€” Stacked Cards + Rating Bar
       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-      <section class="hero__right" aria-label="Client reviews and ratings">
+    <section class="hero__right" aria-label="Client reviews and ratings">
 
-        <!-- Stacked Testimonial Cards (top of right column) -->
-        <div class="cards-wrapper">
-          <div id="card-deck" class="card-deck">
-            <!-- Cards injected by TypeScript -->
+      <!-- Stacked Testimonial Cards (top of right column) -->
+      <div class="cards-wrapper">
+        <div id="card-deck" class="card-deck">
+          <!-- Cards injected by TypeScript -->
+        </div>
+        <p class="card-hint" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Drag front card to shuffle
+        </p>
+      </div>
+
+      <!-- Official Stars & Rating Bar (below cards â€” matches sketch label) -->
+      <div id="rating-bar" class="rating-bar-section" aria-label="Official stars and rating">
+
+        <!-- Big score -->
+        <div class="rating-bar__score-block">
+          <span class="rating-bar__number">4.8</span>
+          <div class="rating-bar__label-col">
+            <span class="rating-bar__out-of">out of 5</span>
+            <span class="rating-bar__source">Google &amp; Trustpilot</span>
           </div>
-          <p class="card-hint" aria-live="polite">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-            Drag front card to shuffle
+        </div>
+
+        <!-- Divider -->
+        <div class="rating-bar__divider" aria-hidden="true"></div>
+
+        <!-- Stars + count -->
+        <div class="rating-bar__stars-col">
+          <div id="stars-container" class="stars-row" aria-label="4.8 out of 5 stars">
+            <!-- Stars injected by TypeScript -->
+          </div>
+          <span class="rating-bar__count">(1,065) Verified Reviews</span>
+        </div>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  <!-- ===== SIGNATURE SERVICES SECTION ===== -->
+  <section class="services-header">
+    <h2 class="services-title" data-aos="fade-up">Signature Services</h2>
+  </section>
+
+  <!-- ===== CHAIR SCROLL ANIMATION ===== -->
+  <section id="chair-animation" class="chair-track">
+    <div class="chair-sticky">
+      <canvas id="chair-canvas"></canvas>
+      <!-- Overlay to keep it dark/premium -->
+      <div class="chair-overlay"></div>
+
+      <!-- Glassmorphic Service Cards -->
+      <div class="chair-cards-container">
+        <div class="glass-card g-card-1">
+          <h3 class="glass-card__title">Executive Grooming</h3>
+          <p class="glass-card__desc">Precision Haircut, Beard Sculpting & Hairwash</p>
+          <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
+        </div>
+        <div class="glass-card g-card-2">
+          <h3 class="glass-card__title">Royal Treatment</h3>
+          <p class="glass-card__desc">Hot Towel Shave, Straight Razor & Massage</p>
+          <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
+        </div>
+        <div class="glass-card g-card-3">
+          <h3 class="glass-card__title">The Signature</h3>
+          <p class="glass-card__desc">Gold Face Mask, Styling & Detail Grooming</p>
+          <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
+        </div>
+        <div class="glass-card g-card-4">
+          <h3 class="glass-card__title">Junior Legacy</h3>
+          <p class="glass-card__desc">Classic Kid's Cut & Modern Styling</p>
+          <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LUXURY AMBIENT SHOWCASE ===== -->
+  <section id="luxury-showcase" class="luxury-showcase">
+    <!-- Background Image -->
+    <div class="luxury-bg"></div>
+
+
+    <!-- Content Overlay -->
+    <div class="luxury-overlay">
+      <!-- TOP: Timings -->
+      <div class="luxury-timings" data-aos="fade-down">
+        <h2 class="luxury-label">Business Hours</h2>
+        <div class="timings-grid">
+          <div class="timing-row"><span>Monday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span>
+          </div>
+          <div class="timing-row"><span>Tuesday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span>
+          </div>
+          <div class="timing-row"><span>Wednesday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span>
+          </div>
+          <div class="timing-row"><span>Thursday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span>
+          </div>
+          <div class="timing-row"><span>Friday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span>
+          </div>
+          <div class="timing-row"><span>Saturday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span>
+          </div>
+          <div class="timing-row"><span>Sunday</span><span class="dot-leader"></span><span>11:00 AM - 7:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM: Exclusive Deals -->
+      <div class="luxury-deals" data-aos="fade-up">
+        <h2 class="luxury-label">Heritage Deals</h2>
+        <div class="deals-container">
+          <div class="deal-card">
+            <div class="deal-content">
+              <span class="deal-tag">Most Popular</span>
+              <h3>The Royal Combo</h3>
+              <p>Signature Haircut + Royal Shave + Massage</p>
+              <div class="deal-footer">
+                <span class="deal-price">Save 20%</span>
+                <a href="https://wa.me/yournumber?text=I'm%20interested%20in%20the%20Royal%20Combo"
+                  class="deal-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="deal-card">
+            <div class="deal-content">
+              <span class="deal-tag">New Client</span>
+              <h3>First Visit Classic</h3>
+              <p>Classic Haircut + Professional Styling</p>
+              <div class="deal-footer">
+                <span class="deal-price">Flat 15% Off</span>
+                <a href="https://wa.me/yournumber?text=I'm%20interested%20in%20the%20First%20Visit%20Classic"
+                  class="deal-btn">Claim Deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== OUR TEAM SECTION ===== -->
+  <section id="team" class="team-section">
+    <div class="team-header">
+      <h2 class="team-title">Our Master Team</h2>
+      <div class="team-divider"></div>
+    </div>
+
+    <!-- Row 1: Founder LEFT | slider RIGHT -->
+    <div class="team-row">
+      <div class="team-img-box slide-from-left">
+        <img src="/barber/founder.jpg" alt="Founder & CEO" class="team-img">
+      </div>
+      <div class="team-slider-box slide-from-right">
+        <img src="/slider.png" alt="" class="team-slider-img">
+        <div class="slider-info-overlay">
+          <h3 class="team-name">Arthur Dragon</h3>
+          <p class="team-role">Founder & Master Barber</p>
+          <p class="team-bio">With over 15 years of experience, Arthur crafts signature looks blending classic styles
+            with modern precision.</p>
+          <div class="team-actions">
+            <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
+            <a href="#" class="btn btn--outline team-btn">Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: slider LEFT | Barber 1 RIGHT -->
+    <div class="team-row team-row--right">
+      <div class="team-slider-box slide-from-left">
+        <img src="/slider2.png" alt="" class="team-slider-img">
+        <div class="slider-info-overlay">
+          <h3 class="team-name">James Sterling</h3>
+          <p class="team-role">Senior Barber</p>
+          <p class="team-bio">James specializes in elite fading techniques and hot towel shaves, ensuring every client
+            leaves feeling sharp.</p>
+          <div class="team-actions">
+            <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
+            <a href="#" class="btn btn--outline team-btn">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-img-box slide-from-right">
+        <img src="/barber/barber1.jpg" alt="Barber 1" class="team-img">
+      </div>
+    </div>
+
+    <!-- Row 3: Barber 2 LEFT | slider RIGHT -->
+    <div class="team-row">
+      <div class="team-img-box slide-from-left">
+        <img src="/barber/barber2.jpg" alt="Barber 2" class="team-img">
+      </div>
+      <div class="team-slider-box slide-from-right">
+        <img src="/slider.png" alt="" class="team-slider-img">
+        <div class="slider-info-overlay">
+          <h3 class="team-name">Michael Thorne</h3>
+          <p class="team-role">Beard Specialist</p>
+          <p class="team-bio">A true master of facial hair sculpting, Michael provides meticulous beard trims and
+            premium grooming regimens.</p>
+          <div class="team-actions">
+            <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
+            <a href="#" class="btn btn--outline team-btn">Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 4: slider LEFT | Barber 3 RIGHT -->
+    <div class="team-row team-row--right">
+      <div class="team-slider-box slide-from-left">
+        <img src="/slider2.png" alt="" class="team-slider-img">
+        <div class="slider-info-overlay">
+          <h3 class="team-name">David Vance</h3>
+          <p class="team-role">Stylist & Colorist</p>
+          <p class="team-bio">From modern textured crops to natural color blending, David brings an urban edge to the
+            classic barbershop experience.</p>
+          <div class="team-actions">
+            <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
+            <a href="#" class="btn btn--outline team-btn">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-img-box slide-from-right">
+        <img src="/barber/barber3.jpg" alt="Barber 3" class="team-img">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section id="gallery" class="gallery-section">
+    <div class="gallery-header">
+      <h2 class="gallery-title">A Legacy of Style</h2>
+      <p class="gallery-subtitle">A visual journey through our finest cuts and premium atmosphere.</p>
+      <div class="team-divider"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal-item" data-grid="big">
+        <img src="/gallery/1.jpg" alt="Barbershop Shot 1" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item">
+        <img src="/gallery/2.jpg" alt="Barbershop Shot 2" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="tall">
+        <img src="/gallery/3.jpg" alt="Barbershop Shot 3" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="wide">
+        <img src="/gallery/4.jpg" alt="Barbershop Shot 4" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item">
+        <img src="/gallery/5.jpg" alt="Barbershop Shot 5" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item">
+        <img src="/gallery/6.png" alt="Barbershop Shot 6" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="big">
+        <img src="/gallery/7.jpg" alt="Barbershop Shot 7" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item">
+        <img src="/gallery/8.jpg" alt="Barbershop Shot 8" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="tall">
+        <img src="/gallery/9.jpg" alt="Barbershop Shot 9" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="big">
+        <img src="/gallery/10.jpg" alt="Barbershop Shot 10" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item">
+        <img src="/gallery/11.jpg" alt="Barbershop Shot 11" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item">
+        <img src="/gallery/13.jpeg" alt="Barbershop Shot 13a" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="wide">
+        <img src="/gallery/15.jpg" alt="Barbershop Shot 15" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="big">
+        <img src="/gallery/12.jpg" alt="Barbershop Shot 12" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="wide">
+        <img src="/gallery/13.jpg" alt="Barbershop Shot 13b" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="wide">
+        <img src="/gallery/14.jpg" alt="Barbershop Shot 14" class="gallery-img">
+      </div>
+      <div class="gallery-item reveal-item" data-grid="wide">
+        <img src="/gallery/16.jpg" alt="Barbershop Shot 16" class="gallery-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+
+      <!-- Footer Top: Branding & Links -->
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand -->
+        <div class="footer-col footer-col--brand">
+          <div class="footer-logo">
+            <span class="navbar__scissor">✂</span>
+            <span class="navbar__brand">THE LEGACY</span>
+          </div>
+          <p class="footer-about">
+            Premium grooming since 1920. We combine century-old traditions with modern luxury to give you the ultimate
+            barbering experience.
           </p>
-        </div>
-
-        <!-- Official Stars & Rating Bar (below cards â€” matches sketch label) -->
-        <div id="rating-bar" class="rating-bar-section" aria-label="Official stars and rating">
-
-          <!-- Big score -->
-          <div class="rating-bar__score-block">
-            <span class="rating-bar__number">4.8</span>
-            <div class="rating-bar__label-col">
-              <span class="rating-bar__out-of">out of 5</span>
-              <span class="rating-bar__source">Google &amp; Trustpilot</span>
-            </div>
-          </div>
-
-          <!-- Divider -->
-          <div class="rating-bar__divider" aria-hidden="true"></div>
-
-          <!-- Stars + count -->
-          <div class="rating-bar__stars-col">
-            <div id="stars-container" class="stars-row" aria-label="4.8 out of 5 stars">
-              <!-- Stars injected by TypeScript -->
-            </div>
-            <span class="rating-bar__count">(1,065) Verified Reviews</span>
-          </div>
-
-        </div>
-
-
-      </section>
-    </main>
-
-    <!-- ===== SIGNATURE SERVICES SECTION ===== -->
-    <section class="services-header">
-      <h2 class="services-title" data-aos="fade-up">Signature Services</h2>
-    </section>
-
-    <!-- ===== CHAIR SCROLL ANIMATION ===== -->
-    <section id="chair-animation" class="chair-track">
-      <div class="chair-sticky">
-        <canvas id="chair-canvas"></canvas>
-        <!-- Overlay to keep it dark/premium -->
-        <div class="chair-overlay"></div>
-
-        <!-- Glassmorphic Service Cards -->
-        <div class="chair-cards-container">
-          <div class="glass-card g-card-1">
-            <h3 class="glass-card__title">Executive Grooming</h3>
-            <p class="glass-card__desc">Precision Haircut, Beard Sculpting & Hairwash</p>
-            <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
-          </div>
-          <div class="glass-card g-card-2">
-            <h3 class="glass-card__title">Royal Treatment</h3>
-            <p class="glass-card__desc">Hot Towel Shave, Straight Razor & Massage</p>
-            <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
-          </div>
-          <div class="glass-card g-card-3">
-            <h3 class="glass-card__title">The Signature</h3>
-            <p class="glass-card__desc">Gold Face Mask, Styling & Detail Grooming</p>
-            <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
-          </div>
-          <div class="glass-card g-card-4">
-            <h3 class="glass-card__title">Junior Legacy</h3>
-            <p class="glass-card__desc">Classic Kid's Cut & Modern Styling</p>
-            <a href="https://wa.me/yournumber" class="glass-card__btn">Book on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== LUXURY AMBIENT SHOWCASE ===== -->
-    <section id="luxury-showcase" class="luxury-showcase">
-      <!-- Background Image -->
-      <div class="luxury-bg"></div>
-
-
-      <!-- Content Overlay -->
-      <div class="luxury-overlay">
-        <!-- TOP: Timings -->
-        <div class="luxury-timings" data-aos="fade-down">
-          <h2 class="luxury-label">Business Hours</h2>
-          <div class="timings-grid">
-            <div class="timing-row"><span>Monday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span></div>
-            <div class="timing-row"><span>Tuesday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span></div>
-            <div class="timing-row"><span>Wednesday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span></div>
-            <div class="timing-row"><span>Thursday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span></div>
-            <div class="timing-row"><span>Friday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span></div>
-            <div class="timing-row"><span>Saturday</span><span class="dot-leader"></span><span>10:00 AM - 9:00 PM</span></div>
-            <div class="timing-row"><span>Sunday</span><span class="dot-leader"></span><span>11:00 AM - 7:00 PM</span></div>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768" />
+              </svg>
+            </a>
           </div>
         </div>
 
-        <!-- BOTTOM: Exclusive Deals -->
-        <div class="luxury-deals" data-aos="fade-up">
-          <h2 class="luxury-label">Heritage Deals</h2>
-          <div class="deals-container">
-            <div class="deal-card">
-              <div class="deal-content">
-                <span class="deal-tag">Most Popular</span>
-                <h3>The Royal Combo</h3>
-                <p>Signature Haircut + Royal Shave + Massage</p>
-                <div class="deal-footer">
-                  <span class="deal-price">Save 20%</span>
-                  <a href="https://wa.me/yournumber?text=I'm%20interested%20in%20the%20Royal%20Combo" class="deal-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="deal-card">
-              <div class="deal-content">
-                <span class="deal-tag">New Client</span>
-                <h3>First Visit Classic</h3>
-                <p>Classic Haircut + Professional Styling</p>
-                <div class="deal-footer">
-                  <span class="deal-price">Flat 15% Off</span>
-                  <a href="https://wa.me/yournumber?text=I'm%20interested%20in%20the%20First%20Visit%20Classic" class="deal-btn">Claim Deal</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- ===== OUR TEAM SECTION ===== -->
-    <section id="team" class="team-section">
-      <div class="team-header">
-        <h2 class="team-title">Our Master Team</h2>
-        <div class="team-divider"></div>
-      </div>
-
-      <!-- Row 1: Founder LEFT | slider RIGHT -->
-      <div class="team-row">
-        <div class="team-img-box slide-from-left">
-          <img src="/barber/founder.jpg" alt="Founder & CEO" class="team-img">
-        </div>
-        <div class="team-slider-box slide-from-right">
-          <img src="/slider.png" alt="" class="team-slider-img">
-          <div class="slider-info-overlay">
-            <h3 class="team-name">Arthur Dragon</h3>
-            <p class="team-role">Founder & Master Barber</p>
-            <p class="team-bio">With over 15 years of experience, Arthur crafts signature looks blending classic styles with modern precision.</p>
-            <div class="team-actions">
-              <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
-              <a href="#" class="btn btn--outline team-btn">Profile</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Row 2: slider LEFT | Barber 1 RIGHT -->
-      <div class="team-row team-row--right">
-        <div class="team-slider-box slide-from-left">
-          <img src="/slider2.png" alt="" class="team-slider-img">
-          <div class="slider-info-overlay">
-            <h3 class="team-name">James Sterling</h3>
-            <p class="team-role">Senior Barber</p>
-            <p class="team-bio">James specializes in elite fading techniques and hot towel shaves, ensuring every client leaves feeling sharp.</p>
-            <div class="team-actions">
-              <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
-              <a href="#" class="btn btn--outline team-btn">Profile</a>
-            </div>
-          </div>
-        </div>
-        <div class="team-img-box slide-from-right">
-          <img src="/barber/barber1.jpg" alt="Barber 1" class="team-img">
-        </div>
-      </div>
-
-      <!-- Row 3: Barber 2 LEFT | slider RIGHT -->
-      <div class="team-row">
-        <div class="team-img-box slide-from-left">
-          <img src="/barber/barber2.jpg" alt="Barber 2" class="team-img">
-        </div>
-        <div class="team-slider-box slide-from-right">
-          <img src="/slider.png" alt="" class="team-slider-img">
-          <div class="slider-info-overlay">
-            <h3 class="team-name">Michael Thorne</h3>
-            <p class="team-role">Beard Specialist</p>
-            <p class="team-bio">A true master of facial hair sculpting, Michael provides meticulous beard trims and premium grooming regimens.</p>
-            <div class="team-actions">
-              <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
-              <a href="#" class="btn btn--outline team-btn">Profile</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Row 4: slider LEFT | Barber 3 RIGHT -->
-      <div class="team-row team-row--right">
-        <div class="team-slider-box slide-from-left">
-          <img src="/slider2.png" alt="" class="team-slider-img">
-          <div class="slider-info-overlay">
-            <h3 class="team-name">David Vance</h3>
-            <p class="team-role">Stylist & Colorist</p>
-            <p class="team-bio">From modern textured crops to natural color blending, David brings an urban edge to the classic barbershop experience.</p>
-            <div class="team-actions">
-              <a href="#" class="btn btn--primary team-btn">Book on WhatsApp</a>
-              <a href="#" class="btn btn--outline team-btn">Profile</a>
-            </div>
-          </div>
-        </div>
-        <div class="team-img-box slide-from-right">
-          <img src="/barber/barber3.jpg" alt="Barber 3" class="team-img">
-        </div>
-      </div>
-
-    </section>
-
-    <!-- ===== GALLERY SECTION ===== -->
-    <section id="gallery" class="gallery-section">
-      <div class="gallery-header">
-        <h2 class="gallery-title">A Legacy of Style</h2>
-        <p class="gallery-subtitle">A visual journey through our finest cuts and premium atmosphere.</p>
-        <div class="team-divider"></div>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item reveal-item" data-grid="big">
-          <img src="/gallery/1.jpg" alt="Barbershop Shot 1" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item">
-          <img src="/gallery/2.jpg" alt="Barbershop Shot 2" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="tall">
-          <img src="/gallery/3.jpg" alt="Barbershop Shot 3" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="wide">
-          <img src="/gallery/4.jpg" alt="Barbershop Shot 4" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item">
-          <img src="/gallery/5.jpg" alt="Barbershop Shot 5" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item">
-          <img src="/gallery/6.png" alt="Barbershop Shot 6" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="big">
-          <img src="/gallery/7.jpg" alt="Barbershop Shot 7" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item">
-          <img src="/gallery/8.jpg" alt="Barbershop Shot 8" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="tall">
-          <img src="/gallery/9.jpg" alt="Barbershop Shot 9" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="big">
-          <img src="/gallery/10.jpg" alt="Barbershop Shot 10" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item">
-          <img src="/gallery/11.jpg" alt="Barbershop Shot 11" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item">
-          <img src="/gallery/13.jpeg" alt="Barbershop Shot 13a" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="wide">
-          <img src="/gallery/15.jpg" alt="Barbershop Shot 15" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="big">
-          <img src="/gallery/12.jpg" alt="Barbershop Shot 12" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="wide">
-          <img src="/gallery/13.jpg" alt="Barbershop Shot 13b" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="wide">
-          <img src="/gallery/14.jpg" alt="Barbershop Shot 14" class="gallery-img">
-        </div>
-        <div class="gallery-item reveal-item" data-grid="wide">
-          <img src="/gallery/16.jpg" alt="Barbershop Shot 16" class="gallery-img">
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="main-footer">
-      <div class="footer-container">
-        
-        <!-- Footer Top: Branding & Links -->
-        <div class="footer-grid">
-          
-          <!-- Column 1: Brand -->
-          <div class="footer-col footer-col--brand">
-            <div class="footer-logo">
-              <span class="navbar__scissor">✂</span>
-              <span class="navbar__brand">THE LEGACY</span>
-            </div>
-            <p class="footer-about">
-              Premium grooming since 1920. We combine century-old traditions with modern luxury to give you the ultimate barbering experience.
-            </p>
-            <div class="footer-social">
-              <a href="#" class="social-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </a>
-              <a href="#" class="social-link" aria-label="X">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M13.232 10.768l6.768 -6.768"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Column 2: Quick Links -->
-          <div class="footer-col">
-            <h4 class="footer-heading">Navigation</h4>
-            <ul class="footer-links">
-              <li><a href="#services">Services</a></li>
-              <li><a href="#team">Our Team</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Footer Bottom: Copyright -->
-        <div class="footer-bottom">
-          <div class="footer-bottom-line"></div>
-          <div class="footer-bottom-content">
-            <p>&copy; 2026 The Legacy Barbershop. All rights reserved.</p>
-          </div>
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
 
       </div>
-    </footer>
 
-    <script type="module" src="/src/main.ts"></script>
+      <!-- Footer Bottom: Copyright -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-line"></div>
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 The Legacy Barbershop. All rights reserved.</p>
+        </div>
+      </div>
 
-  </body>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+
 </html>
