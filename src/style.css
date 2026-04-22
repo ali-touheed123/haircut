@@ -958,15 +958,7 @@ body {
   /* Full brightness */
 }
 
-/* Add a bright "needle" line in the center of the glow */
-.services-title::before::after,
-.services-title::after::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to var(--dir), transparent, var(--copper-light), transparent);
-  height: 1px;
-}
+/* Needles removed to fix syntax error */
 
 .services-title::before {
   --dir: left;
