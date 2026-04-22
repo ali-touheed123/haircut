@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair Sequence Â· The Legacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      
+      #hair-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        object-fit: cover;
+      }
+      
+      .scroll-track {
+        position: relative;
+        height: 300vh; /* Smooth runway for 50 frames */
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .back-btn {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        z-index: 100;
+        padding: 0.8rem 1.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid var(--copper, #c5a059);
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        backdrop-filter: blur(10px);
+      }
+      
+      .back-btn:hover {
+        background: var(--copper, #c5a059);
+        color: #000;
+      }
+
+      .loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: opacity 0.5s ease-out;
+      }
+
+      .loader-bar {
+        width: 200px;
+        height: 2px;
+        background: rgba(255,255,255,0.1);
+        margin-top: 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .loader-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background: var(--copper, #c5a059);
+        transition: width 0.1s linear;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="loading-screen" class="loading-screen">
+      <div style="font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 0.2em;">THE LEGACY</div>
+      <div class="loader-bar">
+        <div id="loader-progress" class="loader-progress"></div>
+      </div>
+      <div id="loader-text" style="margin-top: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.6rem; opacity: 0.5;">PRELOADING EXPERIENCE...</div>
+    </div>
+
+    <a href="/" class="back-btn">Go Back</a>
+    
+    <canvas id="hair-canvas"></canvas>
+    
+    <div id="hair-animation-track" class="scroll-track"></div>
+
+    <script type="module" src="/src/hair.ts"></script>
+  </body>
+</html>
